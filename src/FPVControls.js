@@ -40,7 +40,8 @@ export default class FPVControls {
 
     init() {
 
-        if (this.mobileCheck) {
+        if (this.mobileCheck()) {
+            alert('desktop')
             document.addEventListener('keydown', (e) => { this.keydownHandler(e) })
             document.addEventListener('keyup', (e) => { this.keyupHandler(e) })
 
@@ -54,6 +55,7 @@ export default class FPVControls {
             this.hideCursor()
 
         } else {
+            alert('mobile')
             this.initJoysticks()
         }
 
@@ -66,7 +68,7 @@ export default class FPVControls {
 
 
     hideCursor() {
-        document.addEventListener("click",  ()=> {
+        document.addEventListener("click", () => {
             document.body.requestPointerLock();
         });
 
@@ -121,11 +123,11 @@ export default class FPVControls {
     }
 
     mobileCheck() {
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          return true;
-           }else{
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            return true;
+        } else {
             return false;
-           }
+        }
     }
 
 
