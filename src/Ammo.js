@@ -52,6 +52,7 @@ export default class Ammo {
                 if (Number.isFinite(value)) {
                     console.log(value);
                     this.physicsUniverse.setGravity(new this.Ammo.btVector3(0, -value, 0));
+                    span.innerHTML = value+'m/s^2'
                 }
             })
         } else {
