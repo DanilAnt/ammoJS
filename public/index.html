@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+        }
+        #joyDiv_move {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            /* transform: translateY(-100%); */
+            
+        }
+        #joyDiv_look {
+            position: fixed;
+          bottom: 0;
+          right: 0;
+            /* transform: translateY(-100%); */
+        }
+        .overlay{
+            position: fixed;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+overflow: hidden;
+display:flex;
+;
+
+        }
+
+        .controls{
+            position: relative;
+display:flex;
+flex-grow: 0;
+height:  220px;
+width: 100%;
+justify-content: space-between
+        }
+
+        *{
+            -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <div style="display: flex; flex: 1; flex-direction: column">
+            <span style="text-align: center; opacity:  0.5;"> 'wasd' to move, double click to show</span>
+            <div>
+                <input type="range" min="0" max="10" value="1" id="gravityInput" />
+                <span id="gravityValue"></span>
+            </div>
+        </div>
+        <div class="controls">
+ <div id="joyDiv_move" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
+        <div id="joyDiv_look" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
+        </div>
+       
+    </div>
+ 
+</body>
+
+</html>
