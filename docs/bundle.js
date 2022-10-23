@@ -6362,8 +6362,8 @@ class FPVControls {
 
     init() {
 
-        if (this.mobileCheck()) {
-            alert('desktop')
+        if (!this.mobileCheck()) {
+            alert('desktop'+ navigator.userAgent)
             document.addEventListener('keydown', (e) => { this.keydownHandler(e) })
             document.addEventListener('keyup', (e) => { this.keyupHandler(e) })
 
@@ -6377,7 +6377,7 @@ class FPVControls {
             this.hideCursor()
 
         } else {
-            alert('mobile')
+            alert('mobile' +navigator.userAgent)
             this.initJoysticks()
         }
 
@@ -6445,11 +6445,8 @@ class FPVControls {
     }
 
     mobileCheck() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            return true;
-        } else {
-            return false;
-        }
+     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+
     }
 
 
