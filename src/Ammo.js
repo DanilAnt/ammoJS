@@ -130,7 +130,7 @@ export default class Ammo {
     }
 
     createRigidBody(object, physicsShape, mass, pos, quat, vel, angVel) {
-        console.log({ object, physicsShape, mass, pos, quat, vel, angVel });
+        // console.log({ object, physicsShape, mass, pos, quat, vel, angVel });
 
 
         if (pos) {
