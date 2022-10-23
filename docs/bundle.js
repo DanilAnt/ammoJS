@@ -6361,6 +6361,7 @@ class FPVControls {
     }
 
     init() {
+        this.hideCursor()
 
         if (!this.mobileCheck()) {
             // alert('desktop'+ navigator.userAgent)
@@ -6374,8 +6375,7 @@ class FPVControls {
             document.addEventListener('mousemove', (e) => { this.mousemoveHandler(e) })
 
 
-            this.hideCursor()
-
+           
         } else {
             // alert('mobile' +navigator.userAgent)
             this.initJoysticks()
@@ -6391,7 +6391,12 @@ class FPVControls {
 
     hideCursor() {
         document.addEventListener("click", () => {
-            document.body.requestPointerLock();
+            try{
+                  document.body.requestPointerLock();
+            }catch(e){
+                console.log(e);
+            }
+          
         });
 
     }
@@ -62748,6 +62753,8 @@ class World {
         // this.createJointObjects()
 
         document.addEventListener('dblclick', (e) => { this.troughBall(e) })
+        let btn = document.getElementById('btnShoot')
+        btn.addEventListener('click',  (e) => { this.troughBall(e)})
         // follenBall (to fall press space)
         document.addEventListener('keydown', (e) => {
             if (e.code === 'Space') {

@@ -39,6 +39,7 @@ export default class FPVControls {
     }
 
     init() {
+        this.hideCursor()
 
         if (!this.mobileCheck()) {
             // alert('desktop'+ navigator.userAgent)
@@ -52,8 +53,7 @@ export default class FPVControls {
             document.addEventListener('mousemove', (e) => { this.mousemoveHandler(e) })
 
 
-            this.hideCursor()
-
+           
         } else {
             // alert('mobile' +navigator.userAgent)
             this.initJoysticks()
@@ -69,7 +69,12 @@ export default class FPVControls {
 
     hideCursor() {
         document.addEventListener("click", () => {
-            document.body.requestPointerLock();
+            try{
+                  document.body.requestPointerLock();
+            }catch(e){
+                console.log(e);
+            }
+          
         });
 
     }

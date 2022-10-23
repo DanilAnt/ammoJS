@@ -22,6 +22,13 @@
           right: 0;
             /* transform: translateY(-100%); */
         }
+
+        .btnShoot{
+            position: fixed;
+            bottom: 200px;
+          right: 50px;
+          width: 80px; height: 80px;  border-radius: 50%; background-color:red;
+        }
         .overlay{
             position: fixed;
             flex-direction: column;
@@ -59,13 +66,17 @@ justify-content: space-between
 
     <div class="overlay">
         <div style="display: flex; flex: 1; flex-direction: column">
-            <span style="text-align: center; opacity:  0.5;"> 'wasd' to move, double click to shoot</span>
+            <span style="text-align: center; opacity:  0.5;"> 'wasd' to move, double click  or red btn to shoot</span>
             <div>
+                <span>gravity</span>
                 <input type="range" min="0" max="10" value="1" id="gravityInput" />
                 <span id="gravityValue">V1.0.1</span>
             </div>
         </div>
         <div class="controls">
+            <div id="btnShoot" class="btnShoot" style="">
+
+            </div>
  <div id="joyDiv_move" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
         <div id="joyDiv_look" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
         </div>

@@ -135,6 +135,8 @@ class World {
         // this.createJointObjects()
 
         document.addEventListener('dblclick', (e) => { this.troughBall(e) })
+        let btn = document.getElementById('btnShoot')
+        btn.addEventListener('click',  (e) => { this.troughBall(e)})
         // follenBall (to fall press space)
         document.addEventListener('keydown', (e) => {
             if (e.code === 'Space') {
