@@ -62775,7 +62775,7 @@ class World {
 
         velocity.multiplyScalar(scalarVelocity)
 
-        this.createBall(0.1, [pos.x, pos.y, pos.z], 50, 0xc0392b, null, velocity);
+        this.createBall(0.1, [pos.x, pos.y, pos.z], 100, 0xc0392b, null, velocity);
 
     }
     cubesFall() {
