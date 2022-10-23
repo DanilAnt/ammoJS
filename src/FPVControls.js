@@ -121,8 +121,8 @@ export default class FPVControls {
             let x = +this.JoyStickLook.GetX()
             let y = +this.JoyStickLook.GetY()
             // console.log(x, y)
-            this.rotateAt.x += x / 20
-            this.rotateAt.y += -y / 20
+            this.rotateAt.x += x / 25
+            this.rotateAt.y += -y / 25
         })
 
     }

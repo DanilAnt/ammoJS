@@ -6443,8 +6443,8 @@ class FPVControls {
             let x = +this.JoyStickLook.GetX()
             let y = +this.JoyStickLook.GetY()
             // console.log(x, y)
-            this.rotateAt.x += x / 20
-            this.rotateAt.y += -y / 20
+            this.rotateAt.x += x / 25
+            this.rotateAt.y += -y / 25
         })
 
     }
@@ -62763,7 +62763,7 @@ class World {
         })
     }
     troughBall() {
-        let scalarVelocity = 200;
+        let scalarVelocity = 100;
         let velocity = (new three__WEBPACK_IMPORTED_MODULE_2__.Vector3(0, 0, -1))
         // .copy(this.Three.controls.camera.rotation)
         let pos = (new three__WEBPACK_IMPORTED_MODULE_2__.Vector3).copy(this.Three.controls.camera.position)

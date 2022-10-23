@@ -145,7 +145,7 @@ class World {
         })
     }
     troughBall() {
-        let scalarVelocity = 200;
+        let scalarVelocity = 100;
         let velocity = (new THREE.Vector3(0, 0, -1))
         // .copy(this.Three.controls.camera.rotation)
         let pos = (new THREE.Vector3).copy(this.Three.controls.camera.position)
