@@ -18,36 +18,24 @@ module.exports = {
         // contentBase: path.join(__dirname, 'public')
     },
     output: {
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'docs'),
+
+        filename: 'bundle.js',
+   
         clean: true,
-        publicPath: './',
+        publicPath: '',
     },
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
+                use: ["style-loader", "css-loader"],
+                
+              },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
         ],
     },
-    resolve: {
-
-        fallback: {
-          "fs": false,
-          "tls": false,
-          "net": false,
-          "path": false,
-          "zlib": false,
-          "http": false,
-          "https": false,
-          "stream": false,
-          "crypto": false,
-          "crypto-browserify": require.resolve('crypto-browserify'), //if you want to use this module also don't forget npm i crypto-browserify 
-        } 
-      },
 };

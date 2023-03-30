@@ -3,81 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;” />
-
-<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
-
-<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;” />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
     <title>My first three.js app</title>
-    <style>
-        body {
-            margin: 0;
-            position: relative;
-        }
-        #joyDiv_move {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            /* transform: translateY(-100%); */
-            
-        }
-        #joyDiv_look {
-            position: fixed;
-          bottom: 0;
-          right: 0;
-            /* transform: translateY(-100%); */
-        }
-
-        .btnShoot{
-            position: fixed;
-            bottom: 200px;
-          right: 50px;
-          width: 80px; height: 80px;  border-radius: 50%; background-color:red;
-        }
-        .overlay{
-            position: fixed;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-overflow: hidden;
-display:flex;
-;
-
-        }
-
-        .controls{
-            position: relative;
-display:flex;
-flex-grow: 0;
-height:  220px;
-width: 100%;
-justify-content: space-between
-        }
-
-        *{
-            -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
-
-        .aim{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 10px;
-            height : 10px;
-            transform: translate(-50%, -50%);
-            border: 1px solid blue;
-            border-radius: 50%;
-        }
-    </style>
+  
 </head>
 
 <body>
@@ -85,7 +15,7 @@ justify-content: space-between
     <div class="overlay">
         <div class="aim"></div>
         <div style="display: flex; flex: 1; flex-direction: column">
-            <span style="text-align: center; opacity:  0.5;"> 'wasd' to move, double click  or red btn to shoot</span>
+            <span style="text-align: center; opacity:  0.5;"> 'wasd' to move, double click or red btn to shoot</span>
             <div>
                 <span>gravity</span>
                 <input type="range" min="0" max="10" value="1" id="gravityInput" />
@@ -96,12 +26,12 @@ justify-content: space-between
             <div id="btnShoot" class="btnShoot" style="">
 
             </div>
- <div id="joyDiv_move" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
-        <div id="joyDiv_look" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
+            <div id="joyDiv_move" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
+            <div id="joyDiv_look" style="width: 200px; height: 200px; margin-bottom: 10px;"></div>
         </div>
-       
+
     </div>
- 
+
 </body>
 
 </html>

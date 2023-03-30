@@ -1,7 +1,7 @@
 import Three from "./Three";
 import Ammo from './Ammo';
 import * as THREE from 'three';
-
+import './style.css'
 
 
 class World {
